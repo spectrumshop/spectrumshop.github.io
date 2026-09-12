@@ -1,0 +1,132 @@
+:root {
+  --ink: #101014;
+  --muted: #5b5b66;
+  --line: #e4e4ea;
+  --bg: #ffffff;
+  --accent: #101014;
+  --flag-bg: #fff3cd;
+  --flag-ink: #7a5800;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.site {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+}
+
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 18px;
+}
+
+nav a:hover { color: var(--ink); }
+
+main { padding: 56px 0 72px; }
+
+h1 {
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 19px;
+  margin: 36px 0 10px;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0 0 16px; }
+
+.lede {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+ul { padding-left: 20px; margin: 0 0 16px; }
+li { margin-bottom: 8px; }
+
+.meta {
+  font-size: 14px;
+  color: var(--muted);
+  border-left: 3px solid var(--line);
+  padding-left: 14px;
+  margin-bottom: 32px;
+}
+
+.flag {
+  background: var(--flag-bg);
+  color: var(--flag-ink);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 48px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+footer.site a { color: var(--muted); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px;
+  font-size: 15px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+th { font-weight: 600; }
+
+a { color: var(--accent); }
+
+@media (max-width: 560px) {
+  h1 { font-size: 27px; }
+  nav a { margin-left: 12px; font-size: 13px; }
+  header.site .wrap { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
